@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart | Shah Engineering</title>
+  <!-- Use the same assets as index.html -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/icons/logo.svg">
+</head>
+<body>
+  <!-- Loading Screen (same as index.html) -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loader">
+      <div class="generator-spinner">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <p>Loading Your Cart...</p>
+    </div>
+  </div>
+
+  <!-- Header (same as index.html) -->
+  <header id="main-header" class="main-header">
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="images/Logo.png" alt="Shah Engineering Logo" class="logo-img">
+        <div class="logo-text">
+          <h1 class="logo-title">Shah Engineering</h1>
+          <p class="logo-subtitle">Power Solutions</p>
+        </div>
+      </div>
+
+      <nav class="desktop-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+          <li class="nav-item"><a href="customize.html" class="nav-link">Custom Build</a></li>
+          <li class="nav-item">
+            <a href="cart.html" class="nav-link cart-link active">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count" id="cart-count">0</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <button id="theme-toggle" class="theme-toggle">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <button id="mobile-menu-btn" class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation (same as index.html) -->
+  <div id="mobile-nav" class="mobile-nav">
+    <div class="mobile-nav-header">
+      <button id="close-mobile-nav" class="close-mobile-nav">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="products.html" class="mobile-nav-link">Products</a></li>
+      <li><a href="customize.html" class="mobile-nav-link">Custom Build</a></li>
+      <li>
+        <a href="cart.html" class="mobile-nav-link cart-link active">
+          <i class="fas fa-shopping-cart"></i> Cart (<span class="cart-count" id="mobile-cart-count">0</span>)
+        </a>
+      </li>
+      <li>
+        <button id="mobile-theme-toggle" class="mobile-theme-toggle">
+          <i class="fas fa-moon"></i> Toggle Theme
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Main Cart Content -->
+  <main class="cart-page">
+    <div class="cart-container">
+      <h1 class="cart-title">Your Shopping Cart</h1>
+      
+      <div class="cart-grid">
+        <!-- Cart Items Section -->
+        <section class="cart-items-section">
+          <div class="section-header">
+            <h2 class="section-title">Items</h2>
+            <span id="item-count" class="section-subtitle">0 items</span>
+          </div>
+          
+          <div id="cart-items" class="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+            <div class="empty-cart-message">
+              <i class="fas fa-shopping-cart"></i>
+              <p>Your cart is empty</p>
+              <a href="products.html" class="btn btn-primary">Browse Products</a>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Order Summary Section -->
+        <section class="order-summary-section glass-card">
+          <div class="section-header">
+            <h2 class="section-title">Order Summary</h2>
+          </div>
+          
+          <div class="order-summary">
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="subtotal">$0.00</span>
+            </div>
+            <div class="summary-row">
+              <span>Shipping</span>
+              <span id="shipping">Calculated at checkout</span>
+            </div>
+            <div class="summary-row">
+              <span>Tax</span>
+              <span id="tax">Calculated at checkout</span>
+            </div>
+            <div class="summary-row total">
+              <span>Estimated Total</span>
+              <span id="total">$0.00</span>
+            </div>
+            
+            <button id="checkout-btn" class="btn btn-primary btn-block" disabled>
+              Proceed to Checkout
+            </button>
+            
+            <div class="payment-options">
+              <img src="images/visa.png" alt="Visa">
+              <img src="images/mastercard.png" alt="Mastercard">
+              <img src="images/jazzcash.png" alt="JazzCash">
+              <img src="images/easypaisa.png" alt="EasyPaisa">
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+
+     <footer class="main-footer">
+    <div class="footer-container">
+      <!-- Footer Columns -->
+      <div class="footer-grid">
+        <!-- Column 1 -->
+        <div class="footer-column">
+          <div class="footer-logo">
+            <img src="images/Logo.png" alt="Shah Engineering Logo" class="footer-logo-img">
+            <h3 class="footer-logo-title">Shah Engineering</h3>
+          </div>
+          <p class="footer-about">
+            Providing premium power solutions since 2010. 
+            Trusted by businesses nationwide for reliable generator systems.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div class="footer-column">
+          <h4 class="footer-column-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="customize.html" class="footer-link">Custom Build</a></li>
+            <li><a href="cart.html" class="footer-link">Shopping Cart</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3 -->
+        <div class="footer-column">
+          <h4 class="footer-column-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+            <li><a href="#" class="footer-link">FAQ</a></li>
+            <li><a href="#" class="footer-link">Installation Guide</a></li>
+            <li><a href="#" class="footer-link">Maintenance Tips</a></li>
+            <li><a href="#" class="footer-link">Warranty</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4 -->
+        <div class="footer-column">
+          <h4 class="footer-column-title">Contact Info</h4>
+          <ul class="footer-contact-info">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>123 Industrial Area, Lahore, Pakistan</span>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <span>+92 300 1234567</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>sales@shahengineering.com</span>
+            </li>
+            <li>
+              <i class="fas fa-clock"></i>
+              <span>Mon-Sat: 9AM - 6PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2024 Shah Engineering. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#" class="legal-link">Privacy Policy</a>
+          <a href="#" class="legal-link">Terms of Service</a>
+          <a href="#" class="legal-link">Shipping Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+<div class="fab-container" id="fab-container">
+    <button class="fab-main" id="fab-main">
+      <i class="fas fa-headset"></i>
+    </button>
+    <div class="fab-options">
+      <a href="tel:+923001234567" class="fab-option" title="Call Us">
+        <i class="fas fa-phone"></i>
+      </a>
+      <a href="https://wa.me/923001234567" class="fab-option" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:sales@shahengineering.com" class="fab-option" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <!-- New Cart-specific JavaScript -->
+  <script src="js/cart.js"></script>
+</body>
+</html>

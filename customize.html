@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shah Engineering | Custom Generator Builder</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/customize.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="icon" type="image/svg+xml" href="images/icons/logo.svg">
+</head>
+<body data-theme="light">
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loader">
+      <div class="generator-spinner">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <p>Preparing Custom Builder...</p>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header id="main-header" class="main-header">
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="images/Logo.png" alt="Shah Engineering Logo" class="logo-img">
+        <div class="logo-text">
+          <h1 class="logo-title">Shah Engineering</h1>
+          <p class="logo-subtitle">Power Solutions</p>
+        </div>
+      </div>
+
+      <nav class="desktop-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+          <li class="nav-item"><a href="customize.html" class="nav-link active">Custom Build</a></li>
+          <li class="nav-item">
+            <a href="cart.html" class="nav-link cart-link">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count" id="cart-count">0</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <button id="theme-toggle" class="theme-toggle">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <button id="mobile-menu-btn" class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div id="mobile-nav" class="mobile-nav">
+    <div class="mobile-nav-header">
+      <button id="close-mobile-nav" class="close-mobile-nav">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="products.html" class="mobile-nav-link">Products</a></li>
+      <li><a href="customize.html" class="mobile-nav-link active">Custom Build</a></li>
+      <li>
+        <a href="cart.html" class="mobile-nav-link cart-link">
+          <i class="fas fa-shopping-cart"></i>
+          Cart (<span class="cart-count" id="mobile-cart-count">0</span>)
+        </a>
+      </li>
+      <li>
+        <button id="mobile-theme-toggle" class="mobile-theme-toggle">
+          <i class="fas fa-moon"></i> Toggle Theme
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Custom Builder Hero -->
+  <section class="custom-hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">Build Your <span>Perfect Generator</span></h1>
+        <p class="hero-subtitle">Configure every detail to match your exact power requirements</p>
+        <div class="progress-tracker">
+          <div class="progress-step active" data-step="1">1. Base Model</div>
+          <div class="progress-step" data-step="2">2. Specifications</div>
+          <div class="progress-step" data-step="3">3. Features</div>
+          <div class="progress-step" data-step="4">4. Review</div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="custom-generator-preview">
+          <img src="images/-generator.jpg" alt="Custom Generator" id="generator-preview">
+          <div class="custom-badge">
+            <i class="fas fa-cogs"></i> Custom Build
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Builder Steps -->
+  <section class="builder-section">
+    <div class="builder-container">
+      <!-- Step 1: Base Model -->
+      <div class="builder-step active" id="step-1">
+        <h2 class="step-title">Select Your Base Model</h2>
+        
+        <div class="model-options">
+          <div class="model-option glass-card" data-model="portable">
+            <div class="model-image">
+              <img src="images/portable-5kw.jpg" alt="Portable Generator">
+            </div>
+            <h3>Portable Series</h3>
+            <ul class="model-features">
+              <li><i class="fas fa-check-circle"></i> 5kW-10kW output</li>
+              <li><i class="fas fa-check-circle"></i> Compact & mobile</li>
+              <li><i class="fas fa-check-circle"></i> Ideal for homes/small businesses</li>
+            </ul>
+            <button class="btn btn-outline select-model">Select</button>
+          </div>
+          
+          <div class="model-option glass-card" data-model="standby">
+            <div class="model-image">
+              <img src="images/standby-15kw.jpg" alt="Standby Generator">
+            </div>
+            <h3>Standby Series</h3>
+            <ul class="model-features">
+              <li><i class="fas fa-check-circle"></i> 15kW-50kW output</li>
+              <li><i class="fas fa-check-circle"></i> Automatic transfer</li>
+              <li><i class="fas fa-check-circle"></i> Commercial/industrial use</li>
+            </ul>
+            <button class="btn btn-outline select-model">Select</button>
+          </div>
+          
+          <div class="model-option glass-card" data-model="industrial">
+            <div class="model-image">
+              <img src="images/industrial-100kw.jpg" alt="Industrial Generator">
+            </div>
+            <h3>Industrial Series</h3>
+            <ul class="model-features">
+              <li><i class="fas fa-check-circle"></i> 75kW-500kW output</li>
+              <li><i class="fas fa-check-circle"></i> Heavy-duty construction</li>
+              <li><i class="fas fa-check-circle"></i> For factories/large facilities</li>
+            </ul>
+            <button class="btn btn-outline select-model">Select</button>
+          </div>
+        </div>
+        
+        <div class="builder-navigation">
+          <button class="btn btn-outline" onclick="location.href='products.html'">
+            <i class="fas fa-arrow-left"></i> Back to Products
+          </button>
+          <button class="btn btn-primary next-step" id="next-step-1" disabled>
+            Continue <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Step 2: Specifications -->
+      <div class="builder-step" id="step-2">
+        <h2 class="step-title">Configure Specifications</h2>
+        
+        <div class="spec-grid">
+          <div class="spec-option">
+            <h3><i class="fas fa-bolt"></i> Power Output</h3>
+            <div class="spec-range">
+              <input type="range" id="power-range" min="5" max="50" step="5" value="15">
+              <div class="range-labels">
+                <span>5kW</span>
+                <span id="power-value">15kW</span>
+                <span>50kW</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="spec-option">
+            <h3><i class="fas fa-gas-pump"></i> Fuel Type</h3>
+            <div class="fuel-options">
+              <button class="fuel-option active" data-fuel="diesel">
+                <i class="fas fa-check-circle"></i> Diesel
+              </button>
+              <button class="fuel-option" data-fuel="natural-gas">
+                Natural Gas
+              </button>
+              <button class="fuel-option" data-fuel="bi-fuel">
+                Bi-Fuel
+              </button>
+            </div>
+          </div>
+          
+          <div class="spec-option">
+            <h3><i class="fas fa-volume-up"></i> Noise Reduction</h3>
+            <div class="noise-options">
+              <div class="noise-option">
+                <input type="radio" id="noise-standard" name="noise" checked>
+                <label for="noise-standard">Standard (68-72dB)</label>
+              </div>
+              <div class="noise-option">
+                <input type="radio" id="noise-quiet" name="noise">
+                <label for="noise-quiet">Quiet Package (+$299)</label>
+              </div>
+              <div class="noise-option">
+                <input type="radio" id="noise-silent" name="noise">
+                <label for="noise-silent">Silent Enclosure (+$999)</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="builder-navigation">
+          <button class="btn btn-outline prev-step">
+            <i class="fas fa-arrow-left"></i> Back
+          </button>
+          <button class="btn btn-primary next-step">
+            Continue <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Step 3: Features -->
+      <div class="builder-step" id="step-3">
+        <h2 class="step-title">Select Additional Features</h2>
+        
+        <div class="feature-grid">
+          <div class="feature-option glass-card">
+            <input type="checkbox" id="feature-remote" class="feature-checkbox">
+            <label for="feature-remote">
+              <div class="feature-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h3>Remote Monitoring</h3>
+              <p>Monitor and control from your smartphone</p>
+              <span class="feature-price">+$199</span>
+            </label>
+          </div>
+          
+          <div class="feature-option glass-card">
+            <input type="checkbox" id="feature-auto" class="feature-checkbox">
+            <label for="feature-auto">
+              <div class="feature-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <h3>Auto Maintenance</h3>
+              <p>Self-diagnosis and maintenance alerts</p>
+              <span class="feature-price">+$349</span>
+            </label>
+          </div>
+          
+          <div class="feature-option glass-card">
+            <input type="checkbox" id="feature-weather" class="feature-checkbox">
+            <label for="feature-weather">
+              <div class="feature-icon">
+                <i class="fas fa-cloud-rain"></i>
+              </div>
+              <h3>Weatherproof</h3>
+              <p>IP55 rated for all weather conditions</p>
+              <span class="feature-price">+$249</span>
+            </label>
+          </div>
+          
+          <div class="feature-option glass-card">
+            <input type="checkbox" id="feature-emergency" class="feature-checkbox">
+            <label for="feature-emergency">
+              <div class="feature-icon">
+                <i class="fas fa-bell"></i>
+              </div>
+              <h3>Emergency Start</h3>
+              <p>Backup battery start system</p>
+              <span class="feature-price">+$179</span>
+            </label>
+          </div>
+        </div>
+        
+        <div class="builder-navigation">
+          <button class="btn btn-outline prev-step">
+            <i class="fas fa-arrow-left"></i> Back
+          </button>
+          <button class="btn btn-primary next-step">
+            Continue <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Step 4: Review -->
+      <div class="builder-step" id="step-4">
+        <h2 class="step-title">Review Your Custom Generator</h2>
+        
+        <div class="review-container">
+          <div class="review-summary glass-card">
+            <h3>Your Configuration</h3>
+            <ul class="summary-list">
+              <li>
+                <span class="summary-label">Base Model:</span>
+                <span class="summary-value" id="review-model">Standby Series</span>
+              </li>
+              <li>
+                <span class="summary-label">Power Output:</span>
+                <span class="summary-value" id="review-power">15kW</span>
+              </li>
+              <li>
+                <span class="summary-label">Fuel Type:</span>
+                <span class="summary-value" id="review-fuel">Diesel</span>
+              </li>
+              <li>
+                <span class="summary-label">Noise Level:</span>
+                <span class="summary-value" id="review-noise">Standard (68-72dB)</span>
+              </li>
+              <li class="features-list">
+                <span class="summary-label">Additional Features:</span>
+                <span class="summary-value" id="review-features">None</span>
+              </li>
+            </ul>
+            
+            <div class="price-summary">
+              <div class="price-row">
+                <span>Base Price:</span>
+                <span id="base-price">$2,499.00</span>
+              </div>
+              <div class="price-row">
+                <span>Additional Features:</span>
+                <span id="features-price">$0.00</span>
+              </div>
+              <div class="price-row total">
+                <span>Total Price:</span>
+                <span id="total-price">$2,499.00</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="review-image">
+            <img src="images/generators/custom-preview.png" alt="Your Custom Generator" id="final-preview">
+          </div>
+        </div>
+        
+        <div class="builder-actions">
+          <button class="btn btn-outline prev-step">
+            <i class="fas fa-arrow-left"></i> Back
+          </button>
+          <button class="btn btn-primary btn-lg" id="add-to-cart-final">
+            <i class="fas fa-cart-plus"></i> Add to Cart - <span id="final-price">$2,499.00</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <div class="footer-logo">
+            <img src="images/Logo.png" alt="Shah Engineering Logo" class="footer-logo-img">
+            <h3 class="footer-logo-title">Shah Engineering</h3>
+          </div>
+          <p class="footer-about">
+            Providing premium power solutions since 2010. 
+            Trusted by businesses nationwide for reliable generator systems.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-column-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="customize.html" class="footer-link">Custom Build</a></li>
+            <li><a href="cart.html" class="footer-link">Shopping Cart</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-column-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+            <li><a href="#" class="footer-link">FAQ</a></li>
+            <li><a href="#" class="footer-link">Installation Guide</a></li>
+            <li><a href="#" class="footer-link">Maintenance Tips</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-column-title">Contact Info</h4>
+          <ul class="footer-contact-info">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>123 Industrial Area, Lahore, Pakistan</span>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <span>+92 300 1234567</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>sales@shahengineering.com</span>
+            </li>
+            <li>
+              <i class="fas fa-clock"></i>
+              <span>Mon-Sat: 9AM - 6PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2024 Shah Engineering. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#" class="legal-link">Privacy Policy</a>
+          <a href="#" class="legal-link">Terms of Service</a>
+          <a href="#" class="legal-link">Shipping Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Action Button -->
+  <div class="fab-container" id="fab-container">
+    <button class="fab-main" id="fab-main">
+      <i class="fas fa-headset"></i>
+    </button>
+    <div class="fab-options">
+      <a href="tel:+923001234567" class="fab-option" title="Call Us">
+        <i class="fas fa-phone"></i>
+      </a>
+      <a href="https://wa.me/923001234567" class="fab-option" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:sales@shahengineering.com" class="fab-option" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/customize.js"></script>
+</body>
+</html>

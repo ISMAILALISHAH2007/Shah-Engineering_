@@ -1,0 +1,54 @@
+:root {
+  /* Light Theme */
+  --primary: #4361ee;
+  --primary-light: #4895ef;
+  --secondary: #3f37c9;
+  --accent: #f72585;
+  --success: #4cc9f0;
+  --warning: #f8961e;
+  --danger: #ef233c;
+  
+  /* Backgrounds */
+  --light: #f8f9fa;
+  --light-gray: #e9ecef;
+  --dark: #212529;
+  --dark-gray: #495057;
+  
+  /* Text */
+  --text-primary: var(--dark);
+  --text-secondary: var(--dark-gray);
+  
+  /* Glassmorphism */
+  --glass: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+[data-theme="dark"] {
+  /* Dark Theme */
+  --primary: #3a86ff;
+  --primary-light: #4cc9f0;
+  --secondary: #8338ec;
+  --accent: #ff006e;
+  
+  /* Backgrounds */
+  --light: #121212;
+  --light-gray: #1e1e1e;
+  --dark: #f8f9fa;
+  --dark-gray: #adb5bd;
+  
+  /* Glassmorphism */
+  --glass: rgba(0, 0, 0, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Apply glass effect */
+.glass-card {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}

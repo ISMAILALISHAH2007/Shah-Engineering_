@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Same head content as index.html -->
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shah Engineering | Premium Power Generators</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/icons/logo.svg">
+  <title>Shah Engineering | Generator Products</title>
+</head>
+<body data-theme="light">
+  <!-- Loading Screen (same as index.html) -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loader">
+      <div class="generator-spinner">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <p>Loading Power Products...</p>
+    </div>
+  </div>
+
+  <!-- Header (same as index.html) -->
+  <header id="main-header" class="main-header">
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="images/Logo.png" alt="Shah Engineering Logo" class="logo-img">
+        <div class="logo-text">
+          <h1 class="logo-title">Shah Engineering</h1>
+          <p class="logo-subtitle">Power Solutions</p>
+        </div>
+      </div>
+
+      <nav class="desktop-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="products.html" class="nav-link active">Products</a></li>
+          <li class="nav-item"><a href="customize.html" class="nav-link">Custom Build</a></li>
+          <li class="nav-item">
+            <a href="cart.html" class="nav-link cart-link">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count" id="cart-count">0</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <button id="theme-toggle" class="theme-toggle">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <button id="mobile-menu-btn" class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation (same as index.html) -->
+  <div id="mobile-nav" class="mobile-nav">
+    <div class="mobile-nav-header">
+      <button id="close-mobile-nav" class="close-mobile-nav">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="products.html" class="mobile-nav-link active">Products</a></li>
+      <li><a href="customize.html" class="mobile-nav-link">Custom Build</a></li>
+      <li>
+        <a href="cart.html" class="mobile-nav-link cart-link">
+          <i class="fas fa-shopping-cart"></i>
+          Cart (<span class="cart-count" id="mobile-cart-count">0</span>)
+        </a>
+      </li>
+      <li>
+        <button id="mobile-theme-toggle" class="mobile-theme-toggle">
+          <i class="fas fa-moon"></i> Toggle Theme
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Products Hero Section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content" data-aos="fade-right" data-aos-duration="800">
+        <h1 class="hero-title">Our <span>Generator Range</span></h1>
+        <p class="hero-subtitle">Browse our complete collection of premium power solutions</p>
+        <div class="hero-cta">
+          <a href="#portable" class="btn btn-primary btn-lg">
+            <i class="fas fa-caravan"></i> Portable
+          </a>
+          <a href="#standby" class="btn btn-outline btn-lg">
+            <i class="fas fa-home"></i> Standby
+          </a>
+        </div>
+      </div>
+      <div class="hero-image" data-aos="fade-left" data-aos-duration="800">
+        <img src="images/hero-generator.jpg" alt="Generator Collection" class="hero-img">
+        <div class="hero-badge">
+          <div class="badge-content">
+            <span class="badge-text">30+ Models</span>
+            <span class="badge-icon"><i class="fas fa-bolt"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portable Generators Section -->
+  <section id="portable" class="products-section">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title">Portable Generators</h2>
+      <p class="section-subtitle">Compact power solutions for mobility and convenience</p>
+    </div>
+    
+    <div class="products-grid">
+      <!-- Product 1 -->
+      <div class="product-card glass-card" data-aos="fade-up">
+        <div class="product-badge">Best Seller</div>
+        <div class="product-image">
+          <img src="images/portable-5kw.jpg" alt="PG-5000 Portable Generator">
+        </div>
+        <div class="product-details">
+          <h4 class="product-name">PG-5000</h4>
+          <div class="product-specs">
+            <span><i class="fas fa-bolt"></i> 5kW Output</span>
+            <span><i class="fas fa-gas-pump"></i> Diesel</span>
+            <span><i class="fas fa-weight-hanging"></i> 85kg</span>
+          </div>
+          <div class="product-price">
+            <span class="current-price">$499.99</span>
+            <span class="original-price">$599.99</span>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-sm btn-outline quick-view" data-id="pg5000">
+              <i class="fas fa-eye"></i> Quick View
+            </button>
+            <button class="btn btn-sm btn-primary add-to-cart" data-id="pg5000">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product 2 -->
+      <div class="product-card glass-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="product-image">
+          <img src="images/portable-7kw.png" alt="PG-7000 Portable Generator">
+        </div>
+        <div class="product-details">
+          <h4 class="product-name">PG-7000</h4>
+          <div class="product-specs">
+            <span><i class="fas fa-bolt"></i> 7kW Output</span>
+            <span><i class="fas fa-gas-pump"></i> Diesel</span>
+            <span><i class="fas fa-weight-hanging"></i> 110kg</span>
+          </div>
+          <div class="product-price">
+            <span class="current-price">$699.99</span>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-sm btn-outline quick-view" data-id="pg7000">
+              <i class="fas fa-eye"></i> Quick View
+            </button>
+            <button class="btn btn-sm btn-primary add-to-cart" data-id="pg7000">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product 3 -->
+      <div class="product-card glass-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="product-badge">New Model</div>
+        <div class="product-image">
+          <img src="images/portable-10kw.jpg" alt="PG-10000 Portable Generator">
+        </div>
+        <div class="product-details">
+          <h4 class="product-name">PG-10000</h4>
+          <div class="product-specs">
+            <span><i class="fas fa-bolt"></i> 10kW Output</span>
+            <span><i class="fas fa-gas-pump"></i> Diesel</span>
+            <span><i class="fas fa-weight-hanging"></i> 150kg</span>
+          </div>
+          <div class="product-price">
+            <span class="current-price">$899.99</span>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-sm btn-outline quick-view" data-id="pg10000">
+              <i class="fas fa-eye"></i> Quick View
+            </button>
+            <button class="btn btn-sm btn-primary add-to-cart" data-id="pg10000">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Standby Generators Section -->
+  <section id="standby" class="products-section">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title">Standby Generators</h2>
+      <p class="section-subtitle">Automatic power backup for homes and businesses</p>
+    </div>
+    
+    <div class="products-grid">
+      <!-- Product 1 -->
+      <div class="product-card glass-card" data-aos="fade-up">
+        <div class="product-image">
+          <img src="images/standby-15kw.jpg" alt="SG-15000 Standby Generator">
+        </div>
+        <div class="product-details">
+          <h4 class="product-name">SG-15000</h4>
+          <div class="product-specs">
+            <span><i class="fas fa-bolt"></i> 15kW Output</span>
+            <span><i class="fas fa-plug"></i> Auto-Transfer</span>
+            <span><i class="fas fa-volume-up"></i> 68dB</span>
+          </div>
+          <div class="product-price">
+            <span class="current-price">$2,199.99</span>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-sm btn-outline quick-view" data-id="sg15000">
+              <i class="fas fa-eye"></i> Quick View
+            </button>
+            <button class="btn btn-sm btn-primary add-to-cart" data-id="sg15000">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product 2 -->
+      <div class="product-card glass-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="product-badge">New Model</div>
+        <div class="product-image">
+          <img src="images/standby-25kw.jpg" alt="SG-25000 Standby Generator">
+        </div>
+        <div class="product-details">
+          <h4 class="product-name">SG-25000</h4>
+          <div class="product-specs">
+            <span><i class="fas fa-bolt"></i> 25kW Output</span>
+            <span><i class="fas fa-plug"></i> Auto-Transfer</span>
+            <span><i class="fas fa-volume-up"></i> 72dB</span>
+          </div>
+          <div class="product-price">
+            <span class="current-price">$3,499.99</span>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-sm btn-outline quick-view" data-id="sg25000">
+              <i class="fas fa-eye"></i> Quick View
+            </button>
+            <button class="btn btn-sm btn-primary add-to-cart" data-id="sg25000">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product 3 -->
+      <div class="product-card glass-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="product-badge">Industrial</div>
+        <div class="product-image">
+          <img src="images/standby-50kw.jpg" alt="SG-50000 Standby Generator">
+        </div>
+        <div class="product-details">
+          <h4 class="product-name">SG-50000</h4>
+          <div class="product-specs">
+            <span><i class="fas fa-bolt"></i> 50kW Output</span>
+            <span><i class="fas fa-plug"></i> Auto-Transfer</span>
+            <span><i class="fas fa-volume-up"></i> 78dB</span>
+          </div>
+          <div class="product-price">
+            <span class="current-price">$6,999.99</span>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-sm btn-outline quick-view" data-id="sg50000">
+              <i class="fas fa-eye"></i> Quick View
+            </button>
+            <button class="btn btn-sm btn-primary add-to-cart" data-id="sg50000">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="comparison-section">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title">Generator Comparison</h2>
+      <p class="section-subtitle">Find the perfect match for your power needs</p>
+    </div>
+    
+    <div class="comparison-table glass-card" data-aos="fade-up">
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Type</th>
+            <th>Power Output</th>
+            <th>Fuel</th>
+            <th>Noise Level</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>PG-5000</td>
+            <td>Portable</td>
+            <td>5kW</td>
+            <td>Diesel</td>
+            <td>65dB</td>
+            <td>$499.99</td>
+          </tr>
+          <tr>
+            <td>PG-7000</td>
+            <td>Portable</td>
+            <td>7kW</td>
+            <td>Diesel</td>
+            <td>68dB</td>
+            <td>$699.99</td>
+          </tr>
+          <tr>
+            <td>SG-15000</td>
+            <td>Standby</td>
+            <td>15kW</td>
+            <td>Diesel</td>
+            <td>68dB</td>
+            <td>$2,199.99</td>
+          </tr>
+          <tr>
+            <td>SG-25000</td>
+            <td>Standby</td>
+            <td>25kW</td>
+            <td>Diesel</td>
+            <td>72dB</td>
+            <td>$3,499.99</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Same Footer as index.html -->
+  <footer class="main-footer">
+    <!-- Footer content from index.html -->
+     
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <!-- Footer Columns -->
+      <div class="footer-grid">
+        <!-- Column 1 -->
+        <div class="footer-column">
+          <div class="footer-logo">
+            <img src="images/Logo.png" alt="Shah Engineering Logo" class="footer-logo-img">
+            <h3 class="footer-logo-title">Shah Engineering</h3>
+          </div>
+          <p class="footer-about">
+            Providing premium power solutions since 2010. 
+            Trusted by businesses nationwide for reliable generator systems.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div class="footer-column">
+          <h4 class="footer-column-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="customize.html" class="footer-link">Custom Build</a></li>
+            <li><a href="cart.html" class="footer-link">Shopping Cart</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3 -->
+        <div class="footer-column">
+          <h4 class="footer-column-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+            <li><a href="#" class="footer-link">FAQ</a></li>
+            <li><a href="#" class="footer-link">Installation Guide</a></li>
+            <li><a href="#" class="footer-link">Maintenance Tips</a></li>
+            <li><a href="#" class="footer-link">Warranty</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4 -->
+        <div class="footer-column">
+          <h4 class="footer-column-title">Contact Info</h4>
+          <ul class="footer-contact-info">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>123 Industrial Area, Lahore, Pakistan</span>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <span>+92 300 1234567</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>sales@shahengineering.com</span>
+            </li>
+            <li>
+              <i class="fas fa-clock"></i>
+              <span>Mon-Sat: 9AM - 6PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2024 Shah Engineering. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#" class="legal-link">Privacy Policy</a>
+          <a href="#" class="legal-link">Terms of Service</a>
+          <a href="#" class="legal-link">Shipping Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </footer>
+
+  <!-- Same FAB as index.html -->
+  <div class="fab-container" id="fab-container">
+    <button class="fab-main" id="fab-main">
+      <i class="fas fa-headset"></i>
+    </button>
+    <div class="fab-options">
+      <a href="tel:+923001234567" class="fab-option" title="Call Us">
+        <i class="fas fa-phone"></i>
+      </a>
+      <a href="https://wa.me/923001234567" class="fab-option" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:sales@shahengineering.com" class="fab-option" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Same Scripts as index.html -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>
