@@ -155,9 +155,9 @@ a {
 }
 
 .logo-img {
-  width: 100px;         /* adjust size as needed */
-  height: 100px;        /* same as width for perfect circle */
-  border-radius: 48%;
+  width: 92px;         /* adjust size as needed */
+  height: 92px;        /* same as width for perfect circle */
+  border-radius: 50%;
   object-fit: cover;    /* crops the image to fit the circle */
 }
 
@@ -1321,4 +1321,5 @@ body.no-scroll {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary);
+
 }
